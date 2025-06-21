@@ -1,29 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>películas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Películas de Ciencia Ficción | Buy-tecnology</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+
+        body {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-  <nav> 
-    <ul>
-        <li>
-            <a href="index.html">Inicio</a></li>
-              <li><a href="libros.html">Libros de tecnologia</a></li>
+    <header>
+        <h1>Películas de Ciencia Ficción</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="libros.html">Libros de tecnología</a></li>
                 <li><a href="peliculas.html">Películas de ciencia ficción</a></li>
-                  </li><li><a href="juegos.html">Juegos</a></li>
-        
-    </ul>
- </nav>
-<img src="imagenes/matrix01.png" alt=""width="20%">
-    <h1>película clásica Matriz</h1>
-    <p>Ciencia ficción clásica como de la nueva generación sin límites con excelente calidad, sin anuncios</p>
-    <section>
-        <h4>exclusivo sin interrupciones</h4>
-        <img src="imagenes/pelicula.png" alt="pelicula">
-        
-    </section>
-    <p>Vive la emoción del cine como nunca antes, con las mejores películas del momento. Aventuras épicas, romances inolvidables, risas contagiosas y giros sorprendentes te esperan en cada historia. ¡Déjate atrapar por la magia del séptimo arte y disfruta de experiencias que te harán soñar, sentir y vibrar</p>
+                <li><a href="juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <div class="tarjeta">
+            <h2>Matrix: Clásico de la ciencia ficción</h2>
+            <img src="imagenes/matrix01.png" alt="Película Matrix" class="imagen-destacada" />
+            <p>
+                Accede a una colección curada de obras maestras de la ciencia ficción clásica y contemporánea, que integran narrativas visionarias con fundamentos científicos, proyecciones tecnológicas y especulaciones futuristas, todo presentado con alta fidelidad editorial, sin interrupciones publicitarias ni distracciones externas.
+            </p>
+
+            <div class="tarjeta" style="margin-top: 1rem;">
+                <h3>Exclusivo sin interrupciones</h3>
+                <img src="imagenes/pelicula.png" alt="Otra vista de Matrix" class="imagen-destacada" />
+                <p>
+                    Vive la emoción del cine como nunca antes, con las mejores películas del momento. Aventuras épicas, romances inolvidables, risas contagiosas y giros sorprendentes te esperan en cada historia.
+                </p>
+                <img src="imagenes/Star Wars.jpeg" alt="Clásica de Star Wars" />
+                <p>
+                    Experimenta la epopeya cinematográfica que revolucionó la ciencia ficción, integrando narrativa espacial, efectos visuales innovadores y arquitectura narrativa transmedia: Star Wars, un hito en la cultura tecnológica y audiovisual.
+                </p>
+
+                <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DywnxIuPtUs?si=ktFkXsS4XpWG_a7t" title="trailer star Wars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            </div>
+        </div>
+
+        <section
+            class="formulario-contacto"
+            style="
+                margin-top: 2rem;
+                padding: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+            "
+        >
+            <h2>Contáctanos</h2>
+            <p>¿Tienes una película favorita que no ves aquí? Escríbenos y cuéntanos cuál te gustaría agregar:</p>
+            <form action="procesar_contacto.php" method="post">
+                <label for="nombre">Tu nombre:</label><br />
+                <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+                <label for="correo">Tu correo electrónico:</label><br />
+                <input type="email" id="correo" name="correo" required /><br /><br />
+
+                <label for="pelicula">Nombre de la película sugerida:</label><br />
+                <input type="text" id="pelicula" name="pelicula" required /><br /><br />
+
+                <label for="mensaje">Mensaje adicional:</label><br />
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea><br /><br />
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <img src="imagenes/juego.png" alt="Icono de juegos" />
+        <img src="imagenes/juego1.png" alt="Icono de juegos" />
+        <img src="imagenes/pelicula.png" alt="Icono de películas" />
+        <p>&copy; 2025 Buy-tecnology. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
+
+
+
+

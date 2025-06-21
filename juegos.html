@@ -1,31 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos</title>
+    <title>Juegos | Buy‑tecnology</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav> 
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-                <li><a href="libros.html">Libros de tecnologia</a></li>
-                <li><a href="peliculas.html">Películas de ciencia ficción</a></li>
-                </li>
-        
-    </ul>
-
- </nav>
-    <h1>Juegos online </h1>
-    <img src="imagenes/juegosn.png" alt="juegos">
-    <p>diversión sin límites, para grandes y pequeños. (pequeños con el permiso de un adulto mayor), calidad asegurada</p>
-    <section>
-        <img src="imagenes/juegosn1.png" alt="juegos">
-        <p>¡Sumérgete en la emoción de los juegos online! Disfruta de aventuras épicas, retos multijugador y diversión sin límites desde cualquier lugar. Conéctate, compite y comparte la experiencia con miles de jugadores alrededor del mundo. ¡El entretenimiento nunca había sido tan accesible!</p>
-     <img src="imagenes/juegos divertidos.png" alt="juegos"> <li> <a href="ingresa y diviertete">ingresa y diviertete</a></li>
-    </section>
+   
     <header>
+        <h1>Juegos Online</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="libros.html">Libros de tecnología</a></li>
+                <li><a href="peliculas.html">Películas de ciencia ficción</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
- </nav>
+    <main class="contenedor">
+       
+        <div class="tarjeta">
+            <h2>Diversión sin límites</h2>
+            <img src="imagenes/juegosn.png" alt="Juegos online" class="imagen-destacada">
+
+            <p style="font-style: italic; font-weight: bold;">
+                Contenido apto para todas las edades, diseñado para un público amplio incluyendo menores bajo la supervisión de un adulto responsable, garantizando estándares elevados de calidad audiovisual, seguridad de acceso y cumplimiento normativo para entornos familiares.
+            </p>
+
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/X_zzh-g2a4M?si=wDcTGk6ZcI2E50_l"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="tarjeta">
+            <img src="imagenes/juegosn1.png" alt="Más juegos" class="imagen-destacada">
+
+            <p style="font-style: italic; font-weight: bold;">
+                Sumérgete en una experiencia interactiva de gaming en línea de última generación, habilitada por infraestructuras de red de baja latencia y arquitectura multinube, donde disfrutarás de campañas narrativas de alto presupuesto, desafíos cooperativos y competitivos en tiempo real mediante matchmaking avanzado.
+            </p>
+
+            <img src="imagenes/juegos divertidos.png" alt="Juegos divertidos" class="imagen-destacada">
+
+            <p style="font-style: italic; font-weight: bold;">
+                Explora entornos virtuales inmersivos con gráficos de alta fidelidad y física en tiempo real, enfrentando desafíos multijugador mediante servidores dedicados y sistemas de emparejamiento inteligente, todo optimizado para una experiencia de juego online fluida, segura y multiplataforma.
+            </p>
+
+            <a href="#" class="boton">Ingresa y diviértete</a>
+        </div>
+    </main>
+
+    <section id="contacto" style="padding: 20px; background-color: #f2f2f2;">
+        <h2>Contáctanos</h2>
+
+        <form id="formulario-juego" style="max-width: 400px; display: flex; flex-direction: column;">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="juego">¿Cuál es tu juego favorito?</label>
+            <input type="text" id="juego" name="juego" required>
+
+            <label for="mensaje">Mensaje o comentario:</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+            <button type="submit" style="margin-top: 10px;">Enviar</button>
+        </form>
+
+        <div id="respuesta" style="margin-top: 20px; font-weight: bold;"></div>
+    </section>
+
+    <footer>
+        <img src="imagenes/juego.png" alt="Icono de juegos">
+        <img src="imagenes/juego1.png" alt="Icono de juegos">
+        <img src="imagenes/pelicula.png" alt="Icono de películas">
+        <p>&copy; 2025 Buy‑tecnology. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById("formulario-juego").addEventListener("submit", function (event) {
+            event.preventDefault(); 
+
+            const nombre  = document.getElementById("nombre").value;
+            const juego   = document.getElementById("juego").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            document.getElementById("respuesta").innerHTML = `
+                ¡Gracias, <strong>${nombre}</strong>!<br>
+                Tu juego favorito es: <strong>${juego}</strong>.<br>
+                Tu mensaje: <em>${mensaje}</em>
+            `;
+
+            this.reset(); 
+        });
+    </script>
 </body>
 </html>
+
+
