@@ -6,7 +6,7 @@
     <title>Libros de Tecnología | Buy-tecnology</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="pagina-libros">
     <header>
         <h1>Libros de Tecnología</h1>
         <nav>
@@ -15,7 +15,6 @@
                 <li><a href="libros.html">Libros de tecnología</a></li>
                 <li><a href="peliculas.html">Películas de ciencia ficción</a></li>
                 <li><a href="juegos.html">Juegos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -34,39 +33,27 @@
             <img src="imagenes/libro01.png" alt="Libro de programación" class="imagen-destacada">
             <h3>Millones de lectores ya lo compraron por su calidad y claridad de ideas</h3>
             <p style="font-style: italic; font-weight: bold;">
-                Explora universos de conocimiento excepcionales y despierta emociones intelectuales a través de la lectura especializada en informática...
+                Explora universos de conocimiento excepcionales y despierta emociones intelectuales...
             </p>
             <img src="imagenes/libro tecnologico.png" alt="Libro tecnológico" class="imagen-destacada">
             <a href="#" class="boton">Consíguelos aquí</a>
         </div>
+
+        <!-- Formulario de contacto -->
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form id="formulario-libro">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="libro">¿Cuál es tu libro favorito?</label>
+                <input type="text" id="libro" name="libro" required>
+                <label for="autor">¿Quién es tu autor favorito?</label>
+                <input type="text" id="autor" name="autor" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="respuesta"></div>
+        </section>
     </main>
-
-    <!-- SECCIÓN DE CONTACTO -->
-    <section id="contacto" style="padding: 20px; background-color: #f2f2f2;">
-        <h2>Contáctanos</h2>
-
-        <form id="formulario-libro" style="max-width: 400px; display: flex; flex-direction: column;">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="libro">¿Cuál es tu libro favorito?</label>
-            <input type="text" id="libro" name="libro" required>
-
-            <label for="autor">¿Quién es tu autor favorito?</label>
-            <input type="text" id="autor" name="autor" required>
-
-            <label for="mensaje">Mensaje adicional:</label>
-            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-
-            <button type="submit" style="margin-top: 10px;">Enviar</button>
-        </form>
-
-        <!-- Aquí se mostrará la respuesta -->
-        <div id="respuesta" style="margin-top: 20px; font-weight: bold;"></div>
-    </section>
 
     <footer>
         <img src="imagenes/juego.png" alt="Icono de juegos">
@@ -75,28 +62,22 @@
         <p>&copy; 2025 Buy-tecnology. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- SCRIPT PARA MOSTRAR DATOS EN LA PÁGINA -->
     <script>
         document.getElementById("formulario-libro").addEventListener("submit", function (event) {
             event.preventDefault();
-
             const nombre = document.getElementById("nombre").value;
             const libro = document.getElementById("libro").value;
             const autor = document.getElementById("autor").value;
-            const mensaje = document.getElementById("mensaje").value;
-
-            const respuesta = `
+            document.getElementById("respuesta").innerHTML = `
                 ¡Gracias, <strong>${nombre}</strong>!<br>
                 Tu libro favorito es: <strong>${libro}</strong><br>
-                Tu autor favorito es: <strong>${autor}</strong><br>
-                Tu mensaje: <em>${mensaje}</em>
+                Tu autor favorito es: <strong>${autor}</strong>
             `;
-
-            document.getElementById("respuesta").innerHTML = respuesta;
-
-            this.reset(); // Limpia el formulario
+            this.reset();
         });
     </script>
 </body>
 </html>
+
+
 

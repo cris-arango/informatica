@@ -1,110 +1,228 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Películas de Ciencia Ficción | Buy-tecnology</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <style>
-
-        body {
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Películas de Ciencia Ficción | Buy-tecnology</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1, h2, h3, p, a, li {
+      font-style: italic;
+    }
+    
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav li {
+      margin: 0 15px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    nav a:hover {
+      color: #ccc;
+    }
+    
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .tarjeta {
+      background-color: #222;
+      border-radius: 10px;
+      margin: 15px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+    
+    .imagen-destacada {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    
+    .boton {
+      display: inline-block;
+      background-color: #444;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    
+    .boton:hover {
+      background-color: #666;
+    }
+    
+    .contacto {
+      background-color: #111;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      background-color: #333;
+      border: 1px solid #555;
+      color: white;
+      border-radius: 5px;
+    }
+    
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    footer img {
+      margin: 0 10px;
+      height: 40px;
+    }
+    
+    #pelicula-favorita {
+      margin: 30px auto;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+      text-align: center;
+    }
+    
+    .video-container {
+      margin: 30px auto;
+      max-width: 560px;
+      text-align: center;
+    }
+    
+    .video-container h2 {
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Películas de Ciencia Ficción</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="libros.html">Libros de tecnología</a></li>
-                <li><a href="peliculas.html">Películas de ciencia ficción</a></li>
-                <li><a href="juegos.html">Juegos</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="pagina-peliculas">
+  <header>
+    <h1>Películas de Ciencia Ficción</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="libros.html">Libros de tecnología</a></li>
+        <li><a href="peliculas.html">Películas de ciencia ficción</a></li>
+        <li><a href="juegos.html">Juegos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="contenedor">
-        <div class="tarjeta">
-            <h2>Matrix: Clásico de la ciencia ficción</h2>
-            <img src="imagenes/matrix01.png" alt="Película Matrix" class="imagen-destacada" />
-            <p>
-                Accede a una colección curada de obras maestras de la ciencia ficción clásica y contemporánea, que integran narrativas visionarias con fundamentos científicos, proyecciones tecnológicas y especulaciones futuristas, todo presentado con alta fidelidad editorial, sin interrupciones publicitarias ni distracciones externas.
-            </p>
+  <main class="contenedor">
+    <!-- Tarjeta 1 -->
+    <div class="tarjeta">
+      <h2>Clásicos imprescindibles</h2>
+      <img src="imagenes/matrix01.png" alt="Película Matrix" class="imagen-destacada">
+      <p>
+        Sumérgete en universos cinematográficos emblemáticos que redefinieron el género, con efectos visuales pioneros y reflexiones filosóficas sobre la inteligencia artificial, la realidad simulada y la condición humana.
+      </p>
+      <img src="imagenes/Star Wars.jpeg" alt="clasica de star Wars"><p>Sumérgete en un épico universo de algoritmos intergalácticos, donde la inteligencia artificial se enfrenta a protocolos de rebelión binaria, los campos de fuerza desafían las leyes de la física cuántica y los sabios de datos (Jedi) libran una batalla de código abierto contra el lado oscuro del machine learning. ¡Experimenta la saga definitiva de protocolos de comunicación láser, interfaces droid-humano y arquitecturas de sistemas estelares que redefinieron el paradigma cinematográfico</p>
+    </div>
 
-            <div class="tarjeta" style="margin-top: 1rem;">
-                <h3>Exclusivo sin interrupciones</h3>
-                <img src="imagenes/pelicula.png" alt="Otra vista de Matrix" class="imagen-destacada" />
-                <p>
-                    Vive la emoción del cine como nunca antes, con las mejores películas del momento. Aventuras épicas, romances inolvidables, risas contagiosas y giros sorprendentes te esperan en cada historia.
-                </p>
-                <img src="imagenes/Star Wars.jpeg" alt="Clásica de Star Wars" />
-                <p>
-                    Experimenta la epopeya cinematográfica que revolucionó la ciencia ficción, integrando narrativa espacial, efectos visuales innovadores y arquitectura narrativa transmedia: Star Wars, un hito en la cultura tecnológica y audiovisual.
-                </p>
+    <!-- Tarjeta 2 -->
+    <div class="tarjeta">
+      <h2>Nuevos estrenos</h2>
+      <img src="imagenes/matrix02.png" alt="Película de ciencia ficción" class="imagen-destacada">
+      <p>
+        Descubre las producciones más recientes que integran narrativas envolventes, tecnología de captura de movimiento de última generación y mundos post-apocalípticos hiperrealistas.
+      </p>
+      <a href="#" class="boton">Ver más</a>
+    </div>
+  </main>
 
-                <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/DywnxIuPtUs?si=ktFkXsS4XpWG_a7t" title="trailer star Wars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            </div>
-        </div>
+  <!-- Sección del Video -->
+  <div class="video-container">
+    <h2>Tráiler destacado</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DywnxIuPtUs?si=SVZ71odBmRL24XVB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 
-        <section
-            class="formulario-contacto"
-            style="
-                margin-top: 2rem;
-                padding: 1rem;
-                border: 1px solid #ccc;
-                border-radius: 8px;
-            "
-        >
-            <h2>Contáctanos</h2>
-            <p>¿Tienes una película favorita que no ves aquí? Escríbenos y cuéntanos cuál te gustaría agregar:</p>
-            <form action="procesar_contacto.php" method="post">
-                <label for="nombre">Tu nombre:</label><br />
-                <input type="text" id="nombre" name="nombre" required /><br /><br />
+  <!-- Sección de Película Favorita -->
+  <section id="pelicula-favorita">
+    <h2>¿Cuál es tu película de ciencia ficción favorita?</h2>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="pelicula">Película favorita:</label>
+        <input type="text" id="pelicula" name="pelicula" required>
+      </div>
+      <div class="form-group">
+        <label for="razon">¿Por qué te gusta?</label>
+        <textarea id="razon" name="razon" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="boton">Enviar</button>
+    </form>
+  </section>
 
-                <label for="correo">Tu correo electrónico:</label><br />
-                <input type="email" id="correo" name="correo" required /><br /><br />
+  <!-- Sección de Contacto -->
+  <section class="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <div class="form-group">
+        <label for="contacto-nombre">Nombre:</label>
+        <input type="text" id="contacto-nombre" name="contacto-nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="contacto-email">Email:</label>
+        <input type="email" id="contacto-email" name="contacto-email" required>
+      </div>
+      <div class="form-group">
+        <label for="contacto-mensaje">Mensaje:</label>
+        <textarea id="contacto-mensaje" name="contacto-mensaje" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="boton">Enviar mensaje</button>
+    </form>
+  </section>
 
-                <label for="pelicula">Nombre de la película sugerida:</label><br />
-                <input type="text" id="pelicula" name="pelicula" required /><br /><br />
-
-                <label for="mensaje">Mensaje adicional:</label><br />
-                <textarea id="mensaje" name="mensaje" rows="4"></textarea><br /><br />
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <img src="imagenes/juego.png" alt="Icono de juegos" />
-        <img src="imagenes/juego1.png" alt="Icono de juegos" />
-        <img src="imagenes/pelicula.png" alt="Icono de películas" />
-        <p>&copy; 2025 Buy-tecnology. Todos los derechos reservados.</p>
-    </footer>
+  <footer>
+    <img src="imagenes/juego.png" alt="Icono de juegos">
+    <img src="imagenes/juego1.png" alt="Icono de juegos">
+    <img src="imagenes/pelicula.png" alt="Icono de películas">
+    <p>&copy; 2025 Buy-tecnology. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
-
-
-
-
